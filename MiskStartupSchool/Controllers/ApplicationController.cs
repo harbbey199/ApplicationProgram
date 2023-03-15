@@ -15,7 +15,7 @@ namespace ApplicationProgram.Controllers
         {
             _appRepo = apprepo;
         }
-        [HttpPost("add-application")]
+        [HttpPost("add-allDetails")]
         public async Task<IActionResult> AddApplication([FromBody] ApplicationDto application)
         {
             return Ok(await _appRepo.Add(application));

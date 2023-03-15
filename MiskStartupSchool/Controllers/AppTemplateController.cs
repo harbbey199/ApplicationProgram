@@ -17,14 +17,14 @@ namespace ApplicationProgram.Controllers
             _temp = temp;
         }
 
-        [HttpGet("get-apptemp")]
+        [HttpGet("get-template")]
         public async Task<IActionResult> GetAppTemp(string Id)
         {
             var data = await _temp.GetTemplate(Id);
             return Ok(data);
         }
 
-        [HttpPut("update-apptemp")]
+        [HttpPut("update-template")]
         public async Task<IActionResult> UpdateWorkflow(AppTemplateDto program, string Id)
         {
             var data = await _temp.UpdateTemplate(program, Id);
